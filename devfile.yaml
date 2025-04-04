@@ -98,12 +98,15 @@ commands:
         ON CONFLICT (email) DO NOTHING;
         \" | psql -U local -d quarkus-db"
       workingDir: /projects
+
   - id: list-users
     exec:
       label: 5. List users from the database
       component: postgres
       commandLine: |
-        bash -c \"echo 'SELECT * FROM person;' | psql -U local -d quarkus-db\"
+        bash -c "echo '
+        SELECT * FROM person;
+        ' | psql -U local -d quarkus-db"
       workingDir: /projects
   - id: cleanup-db
     exec:
