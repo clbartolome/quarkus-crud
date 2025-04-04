@@ -29,10 +29,6 @@ components:
           targetPort: 8080
           protocol: http
           path: /q/health/live
-        - name: dev-console
-          targetPort: 8080
-          protocol: http
-          path: /q/dev-ui/welcome
   - name: postgres
     container:
       image: postgres:17
