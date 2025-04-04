@@ -9,6 +9,15 @@ If you want to learn more about Quarkus, please visit its website: <https://quar
 You can run your application in dev mode that enables live coding using:
 
 ```shell script
+# Create a local db
+podman run -d --name demo-db \
+  -e POSTGRES_USER=local \
+  -e POSTGRES_PASSWORD=pass \
+  -e POSTGRES_DB=quarkus-db \
+  -p 5432:5432 \
+  postgres:17
+
+# Start dev service
 ./mvnw quarkus:dev
 ```
 
