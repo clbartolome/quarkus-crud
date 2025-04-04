@@ -61,13 +61,13 @@ commands:
     exec:
       label: 1. Run unit tests
       component: tools
-      commandLine: 'mvn -Dmaven.repo.local=/home/user/.m2/repository test'
+      commandLine: './mvnw -Dmaven.repo.local=/home/user/.m2/repository test'
       workingDir: ${PROJECT_SOURCE}
   - id: dev-run
     exec:
       label: 2. Run Quarkus dev mode
       component: tools
-      commandLine: 'mvn -Dmaven.repo.local=/home/user/.m2/repository quarkus:dev -Dquarkus.http.host=0.0.0.0'
+      commandLine: './mvnw  -Dmaven.repo.local=/home/user/.m2/repository quarkus:dev -Dquarkus.http.host=0.0.0.0'
       hotReloadCapable: true
       group:
         kind: run
