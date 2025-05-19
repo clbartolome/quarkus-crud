@@ -1,5 +1,5 @@
 # Stage 1: Build the Quarkus app using Maven
-FROM maven:3.9.6-eclipse-temurin-21 AS build
+FROM docker.io/library/maven:3.9.6-eclipse-temurin-21 AS build
 
 WORKDIR /build
 
