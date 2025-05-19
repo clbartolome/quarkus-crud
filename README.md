@@ -17,7 +17,7 @@ podman run -d --name demo-db \
   -p 5432:5432 \
   postgres:17
 
-# Start dev service
+# Start dev service 
 ./mvnw quarkus:dev
 ```
 
